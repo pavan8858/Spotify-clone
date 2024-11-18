@@ -141,6 +141,7 @@ width: fit-content;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  z-index: 10;
 
 }
 .sticky-icons{
@@ -196,7 +197,7 @@ margin-left: 1rem;
 }
 .footer{
   height: 300px;
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: center;
 }
@@ -209,46 +210,91 @@ margin-left: 1rem;
 }
 .musicplayer{
   display: flex;
- 
+  justify-content: space-between;
+  align-items: center;
 }
 .album{
-  width: 25%;
+width: 25%;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 .player{
-  width: 50%;
+width: 50%;
+/* background-color: red; */
 }
-.control{
-  width:25%;
-}
-.player_control i{
-  size: 1rem;
-  margin-right: 1;
-}
-/* .player_control i :hover{
-  opacity: 1;
-} */
-/* .fa-regular fa-circle-pause{
-  opacity: 1;
-  height: 2 rem;
-} */
-.player_control{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
+.controls{
+  width: 25%;
  
-.playback_bar{
-  width: 35rem; 
+}
+.player-control{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-
-  
+}
+.player-control-icon{
+  height: 1rem;
+  margin-right: 1.6rem;
+  opacity: 0.7;
+}
+.player-control-icon:hover{
+  opacity: 1;
+}
+.playback_bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .progress-bar{
-  border-radius: 50%;
+  width: 65%;
   appearance: none;
-  width: 70%;
+  background-color: transparent;
+  cursor: pointer;
 }
+.progress-bar::-webkit-slider-runnable-track{
+  background-color:#ddd ;
+  border-radius: 100px;
+  height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+album-image{
+  margin-left: 0;
+}
+.album-text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.album-like{
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+.control-icon{
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+  justify-content: right;
+  right: 0;
+  
+}
+.controld-control-icon{
+  height: 1.5rem;
+  margin-left:1rem ;
+  opacity: 0.7;
+}
+.controld-control-icon:hover{
+  opacity: 1;
+}
+ 
+
+
+
+
